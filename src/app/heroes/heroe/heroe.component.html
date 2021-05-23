@@ -1,0 +1,18 @@
+<!-- Principio de ONE WAY DATA BINDING: Los cambios viajan del controlador a la vista -->
+<h2>{{ nombre }}</h2>
+<dl>
+    <td>Nombre: </td>
+    <dd>{{ nombre }}</dd>
+
+    <td>Edad: </td>
+    <dd>{{ edad }}</dd>
+    
+    <td>Función: </td>
+    <dd>{{ obtenerNombre() }}</dd>
+
+    <td>Getter Capitalizado</td>
+    <dd>{{ nombreCapitalizado }}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">Cambiar Super Héroe</button>
+<button (click)="cambiarEdad()">Cambiar edad</button>

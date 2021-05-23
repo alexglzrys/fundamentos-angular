@@ -1,0 +1,24 @@
+<p>Listado de Heroes</p>
+<button (click)="borrarHeroe()">Borrar</button>
+<ul>
+    <!-- Directiva estructural *ngFor -->
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i + 1 }} - {{ heroe }}
+    </li>
+</ul>
+
+<!-- Directiva estructural *ngIf
+    
+    Para los casos de compuestos if-else se pasa una referencia local
+    del template que se debe mostrar si la condición no se cumple -->
+<div *ngIf="heroeBorrado; else refInforme">
+    <p>Heroe borrado: {{ heroeBorrado }}</p>
+</div>
+
+<!-- Template de angular son contenedores de información 
+    Cuando se usan en condicionales,
+    se encuentran identificados por una #referencia -->
+<ng-template #refInforme>
+    <p>Actualmente no se ha borrado nada</p>
+</ng-template>
+
