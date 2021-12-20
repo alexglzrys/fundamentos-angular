@@ -1,0 +1,25 @@
+<!-- Binding del modelo a la vista - UNA SOLA VIA - Para propiedades [] -->
+<!-- Binding del modelo a la vista - UNA SOLA VIA - Para contenido de etiquetas {{ }} -->
+<!-- https://desarrolloweb.com/articulos/sintaxis-vistas-angular2.html -->
+<h1>Dragon Ball Z</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- Pasar datos a un componente hijo @Input -->
+        <!-- <app-personajes [data]="personajes"></app-personajes> -->
+
+        <!-- Ahora este componente consume el servicio para mostrar el listado de personajes -->
+        <app-personajes></app-personajes>
+    </div>
+    <div class="col">
+        <!-- Escuchar un evento personalizado que puede emitir el componente hijo. 
+            El $event es la información que el componente hijo comparte a su padre. 
+            @Output y EventEmmiter -->
+        <!-- <app-agregar-personaje (onAgregar)="agregarPersonaje( $event )"></app-agregar-personaje> -->
+        
+        <!-- Con la ayuda de los servicios, no es necesario andar subiendo o bajando información a traves de cada componente hijo/padre
+            ya que esta se encuentra centralizada. Y la logica de como se gestiona, se encuntra declarada en sus metodos.
+            Los coponentes solo tienen que invocar esos metodos, no tiene por que saber como se implementa dicha logica -->
+        <app-agregar-personaje></app-agregar-personaje>
+    </div>
+</div>

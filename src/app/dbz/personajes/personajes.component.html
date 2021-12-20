@@ -1,0 +1,9 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+  <!-- Los Pipes en Angular nos permiten transformar o decorar la información a proyectar en la vista
+                Angular incorpora algunos pipes preconstruidos -->
+  <li *ngFor="let personaje of personajes">
+    {{ personaje.nombre }} - {{ personaje.poder | number }} KI
+  </li>
+</ul>

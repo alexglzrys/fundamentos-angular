@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { HeroesModule } from './heroes/heroes.module';
 import { ContadoresModule } from './contadores/contadores.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   // Para poder usar un componente, es necesario que este se encuentre registrado en un modulo
@@ -18,6 +19,7 @@ import { ContadoresModule } from './contadores/contadores.module';
     BrowserModule,
     HeroesModule,
     ContadoresModule,
+    DbzModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

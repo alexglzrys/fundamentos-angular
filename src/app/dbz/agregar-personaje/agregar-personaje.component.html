@@ -1,0 +1,16 @@
+<h3>Agregar</h3>
+<hr>
+<!-- Cualquier evento que se dispare, su información es capturada con $event -->
+<!-- <form (submit)="agregarPersonaje( $event )"> -->
+
+<!-- ngSubmit es una directiva para indicarle a Angular que función se debe
+            ejecutar cunado se envie este formulario -->
+<!-- ngModel es una directiva que nos permite mostrar el valor de una propiedad en una
+            caja de texto, y si el valor cambia desde la vista, se emite un evento para que dicho valor
+            se vea reflejado tambien en el modelo. Para que funcione, es necesario que e input tenga asociada una propiedad name
+            Es un enlace de dos vias -->
+<form (ngSubmit)="agregarPersonaje()">
+  <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nuevoPersonaje.nombre">
+  <input type="number" name="poder" placeholder="Poder de pelea" [(ngModel)]="nuevoPersonaje.poder">
+  <button type="submit">Agregar</button>
+</form>
